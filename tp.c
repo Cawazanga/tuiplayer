@@ -5,6 +5,7 @@ int main(int argc, const char** argv) {
     struct ma_engine engine;
     if (ma_engine_init(NULL, &engine) != MA_SUCCESS) return -1;
     ma_engine_play_sound(&engine, argv[1], NULL);    
+    printf("audio: %s", argv[1]);
     getchar();
     ma_engine_uninit(&engine);
     return 0;
